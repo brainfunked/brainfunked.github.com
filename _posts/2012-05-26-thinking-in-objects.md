@@ -1,6 +1,9 @@
 --
-title:    Thinking in Objects
-category: technical
+title:      Thinking in Objects
+category:   technical
+permalink:  none
+layout:     post
+date:       2012-05-26
 --
 
 Thinking in Objects

@@ -2,7 +2,6 @@
 title:      Thinking in Objects
 category:   technical
 layout:     post
-permalink:  pretty
 date:       2012-05-26
 ---
 

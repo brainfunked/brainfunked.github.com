@@ -1,22 +1,12 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-  <head>
-	  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>brainfunked.github.com</title>
-  </head>
-
-  <body>
-    <h1>
-      Mrugesh Karnik (brainfunked) on github
-    </h1>
-    <h2>
-      The interesting stuff:
-    </h2>
-    <ul>
-      <li>
-      <a href="/askmewhy">Ask me why</a>
-      </li>
+---
+layout: default
+title: Mrugesh Karnik
+---
+    
+    <h2>Posts</h2>
+    <ul class="posts">
+      {% for post in site.posts %}
+      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+      {% endfor %}
     </ul>
-  </body>
 
-</html>

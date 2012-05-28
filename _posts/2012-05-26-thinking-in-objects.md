@@ -117,7 +117,7 @@ About Learning
 learnt a bit about Learning itself. What I'm trying to do with Thinking in
 Objects is to utilise some of this knowledge and see if it can be put to some
 good use. So, in case you're curious about what I'm trying to do, do read up
-[On Learning]({% post_url 2012-05-27-on-learning %}).
+[On Learning](/essays/on-learning.html).
 
 <!---
 vim: tw=79:spell:spelllang=en_gb:

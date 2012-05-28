@@ -11,27 +11,40 @@ Thinking in Objects
 Preface
 -------
 
-In 2010, I was introduced to Ruby - my first properly Object Oriented (OO)
-programming language. Before that, I had experience with scripting using shell
-or Perl. Both of these I could wield procedurally. With shell scripts, there
-isn't any other option anyway.
+Late 2010, I was introduced to [Ruby](http://www.ruby-lang.org) - my first
+proper Object Oriented (OO) programming language. Before that, I had
+experience with scripting using shell or Perl. Both of these I could wield
+procedurally. With shell scripts, there isn't any other option anyway.
 
-Initially, I wrote rudimentary bug fixes and small feature additions in a small
-Rails project. A few months later, I'd taken over the development and
-maintenance of the project. This allowed me to learn basic Ruby. I was still
-writing procedural code, however. It worked, but it was far from pretty. The
-project had been completed and I hadn't yet written a class of my own. I even
-wrote decently complex a couple of script for analytics, using
-[MongoDB](http://www.mongodb.org), in Ruby. And yet, I hadn't used the keyword
-*class* anywhere. Again, the code worked perfectly well and churned out the
-expected output and more.
+Initially, I wrote rudimentary bug fixes and occassional, small feature
+additions in a small Rails project. A few months later, I'd taken over the
+development and maintenance of the project. This allowed me to learn basic
+Ruby. I was still writing procedural code, however. It worked, but it was far
+from pretty with methods 50-60 lines long. The project had been completed and
+I hadn't yet written a class of my own. I even wrote decently complex a couple
+of analytics scripts, using [MongoDB](http://www.mongodb.org), in Ruby. By
+then it was the latter half of 2011 and yet, I hadn't used the keyword 'class'
+anywhere. For someone coding for eight odd months in a fundamentally OO
+language like Ruby, that seems a bit weird now. Though, the code worked
+perfectly well and churned out the expected output and more.
 
-There was a problem, however. Doing feature additions to any of this Ruby code
-was hellish. Around this time I learnt what the *class* keyword in Ruby does
-and what objects are. The problem was that I still couldn't figure out exactly
-how I'd be able to write maintainable code by wielding the Object Oriented
-Programming (OOP) methodology. After all, I'd read that that's one of the
-benefits of doing OOP.
+There was a problem, however. Doing feature additions to any of this Ruby
+(and Rails) code was hellish. I had learnt the Ruby basics from the [Pickaxe
+Book](http://pragprog.com/book/ruby/programming-ruby), but next to nothing
+about OOP itself. I'd read that OOP leads to maintainable code that is easier
+to work with than procedural code after a certain size boundary. However, the
+biggest annoyance for me was when I couldn't understand others' production
+quality Ruby code. There's huge amounts of it on github and I couldn't
+understand most of it! _Those people do all kinds of magic with classes and
+objects and I gawk at it like a child!_
+
+OK, I knew about writing classes and creating objects from The Pickaxe Book.
+But that was just that. I had no OO design nous. The problem was that I still
+couldn't figure out exactly how I'd be able to write maintainable code by
+wielding the Object Oriented Programming (OOP) paradigm. Understanding
+production quality Ruby code would require much better knowledge of Ruby too.
+But with important projects coming up, I needed to be able to think in objects
+too, if I were to *design* them right.
 
 Learning Object Oriented Programming
 ------------------------------------
@@ -39,44 +52,63 @@ Learning Object Oriented Programming
 After fumbling around on the Internet to learn OOP, I picked up Matt Weisfeld's
 [Object-Oriented Thought
 Process](http://www.amazon.com/Object-Oriented-Thought-Process-The-Edition/dp/0672330164/ref=sr_1_1?ie=UTF8&qid=1338037401&sr=8-1).
-It was good going, initially. Classes, objects etc made sense. Even inheritance
-made sense. What I did find a bit problematic was that the book is tightly
-coupled to the implementation of OO in Java, C# etc. Some concepts are defined
-based on their implementation. Some of this didn't really translate well to
-Ruby either.
+It was good going, at least initially. Classes, objects etc. made more sense
+now. I had answers not to just the 'how', but also some 'why'. Even
+inheritance made sense. What I did find a bit problematic was the tight
+coupling between the OO concepts being explained and their implementations in
+Java, C# etc. In fact, some of the concepts are actually *defined* based on
+their implementation. That didn't sit up quite well with me. In the meanwhile,
+I had garnered much better knowledge of Ruby thanks to Russ Olsen's excellent
+[Eloquent
+Ruby](http://www.amazon.com/gp/product/0321584104/ref=as_li_ss_tl?ie=UTF8&tag=eloqruby-20&linkCode=as2&camp=217145&creative=399349&creativeASIN=0321584104).
 
-One fine day, our team had a discussion about OOP. While figuring out the need
-for OOP, I somehow ended up defining the whole flow from Procedural to OO code.
-  The evolution of such code. This thought had nothing to do with any specific
-  implementation and was purely about the OO concepts themselves.
+At the beginning or March 2012, our team had a discussion about OOP. The idea
+was to understand the OO concepts. As it turned out, we also ended up drawing
+upon the basic need for OOP itself. For me, it was a huge step forward for
+understanding of OO. That essential question, *why*, had been answered in my
+head and maybe that's why, OO finally made sense to me. I could draw up the
+evolution of a program from Procedural to OO. This was purely conceptual,
+pristine a thought process and the best part was that I could actually
+translate this to implementations. Ruby really helped there. I could do away
+with the boilerplate and concentrate on reproducing the Object Model I'd
+thought up.
 
-What I realised soon afterwards, was that there are way too many programmers
-who learn OOP the way it is taught in Weisfeld's book. I had also stumbled upon
-James Coplien's [blog post](http://www.artima.com/articles/dci_vision.html) and
-[presentation](http://vimeo.com/8235574) in the meanwhile. It made sense to me.
-But regarding my OOP learning process, it gave me the term *Class Oriented
-Programming*. It made sense then. Weisfeld's book talked of Class Oriented code
-rather than Object Oriented.
+Around this time, I somehow stumbled upon the
+[DCI](http://en.wikipedia.org/wiki/Data,_Context,_and_Interaction) paradigm.
+The object model I'd come up with for a project I'd been working on at the
+time had been very close to DCI - purely coincidentally, since I had drawn it
+up before stumbling upon DCI. Anyway, I found DCI really interesting. I watched
+James Coplien's [presentation](http://vimeo.com/8235574) in the meanwhile.
+Interestingly, it gave me even more understand of object orientation. Finally,
+I realised the problem - way too many programmers are taught *Class Oriented
+Programming*.  They learn the OO concepts necessary for them to be able to
+churn out code in the programming language of their choice. They learn
+concepts the way they've been explained in Weisfeld's book - inside out.
 
 Thinking in Objects
 -------------------
 
-All of this was somewhere back in Jan/Feb 2012. In these recent few months,
-I've come across a lot of knowledge regarding OOP. [Ruby
-Rogues](http://rubyrogues.com) talked of OOP in a couple of podcasts. I've come
-across lots of blog posts about OO design, code smells, coupling etc. One of
-the most important steps was to learn of [Design
+So, in these recent few months, I've acquired a lot of knowledge regarding
+OOP. [Ruby Rogues](http://rubyrogues.com) talked of OOP in a couple of
+podcasts. I've come across lots of blog posts about OO design, code smells,
+coupling etc. One of the most important steps was to learn of [Design
 Patterns](http://c2.com/cgi/wiki?DesignPatterns). OO has started to make some
 sense to me now.
 
 One of the most pleasing moments in this journey of mine was when I realised
-that I'd started to have *feelings* about my OO design. Feelings that tell me
+that I'd started to have *feelings* about my OO design - feelings that tell me
 when something isn't quite right and needs to be designed differently. Learning
 about [Behaviour Driven
 Development](http://en.wikipedia.org/wiki/Behavior_Driven_Development) from the
 [RSpec Book](http://pragprog.com/book/achbd/the-rspec-book) helped me verify
 and act upon these feelings.
 
-So, now that I am comfortable with OOP, I've decided blog about my learning
-process in the hope that it might help others and most importantly, myself,
-evolve with the OO Thought Process.
+So, now that I am comfortable with OOP, I figure I could start writing about
+my learning process in the hope that it might help others and most
+importantly, myself, evolve with the OO Thought Process. As to why it matters,
+I hope to be able to present the answer to that question here too, however
+much I've learnt of it.
+
+<!---
+vim: tw=79:spell:spelllang=en_gb:
+-->

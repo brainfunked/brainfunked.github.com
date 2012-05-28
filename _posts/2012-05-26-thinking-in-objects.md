@@ -111,7 +111,7 @@ I hope to be able to present the answer to that question here too, however
 much I've learnt of it.
 
 About Learning
-==============
+--------------
 
 [As it so happens](http://en.wikipedia.org/wiki/Bill_(Kill_Bill), I've also
 learnt a bit about Learning itself. What I'm trying to do with Thinking in
